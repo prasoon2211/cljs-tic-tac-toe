@@ -1,0 +1,16 @@
+;; shadow-cljs configuration
+;; See https://github.com/thheller/shadow-cljs/issues/441#issuecomment-653933379
+;; for the graal includes
+{:source-paths ["src"]
+ :dependencies [[reagent "1.0.0-alpha2"]
+                [org.graalvm.js/js "20.0.0"]
+                [org.graalvm.js/js-scriptengine "20.0.0"]
+                [binaryage/devtools "1.0.2"]]
+ :dev-http {8080 "target/"}
+ :builds {:app {:target :browser
+                :output-dir "target/"
+                :asset-path "."
+                :modules {:main {:entries [tic-tac-toe.core]
+                                 :init-fn tic-tac-toe.core/main}}
+                :devtools {:before-load tic-tac-toe.core/stop
+                           :after-load  tic-tac-toe.core/start}}}}

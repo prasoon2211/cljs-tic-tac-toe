@@ -1,0 +1,8 @@
+#+title:ClojureScript Tic Tac Toe React Tutorial
+
+A little learning exercise in implementing the [[https://reactjs.org/tutorial/tutorial.html][React Tic Tac Toe tutorial]] using ClojureScript and [[http://reagent-project.github.io/][Reagent]]. Primarily to play around with Reagent and Shadow CLJS. All functionality is implemented almost exactly as in the React tutorial
+
+* Running the app
+- Install ~npm~
+- Install Clojure dependencies: Clojure and ClojureScript, ~shadow-cljs~
+- Run ~shadow-cljs watch app~ and the app should start in a web-browser
